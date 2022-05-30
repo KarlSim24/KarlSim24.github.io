@@ -1,9 +1,119 @@
-li {
-    list-style-type: none;
+/*--------------------------------------------------------------
+# Navbar Section
+--------------------------------------------------------------*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
   }
-li:hover{
-    border-bottom: 1px solid black;
+.navbar_links {
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 30px;
+    color: rgb(80,80,80);
 }
-div {
-    display: block;
+li {
+    display: inline;
+    margin-right: 20px;
+}
+.navbar_left {
+    float: left;
+    padding: 20px;
+}
+.navbar_right {
+    float: right;
+    padding: 20px;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(80,80,80);;
+    transform-origin: bottom left;
+    transition: all 0.4s ease-in-out 0s;
+    width: 80%;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/*--------------------------------------------------------------
+# Main Section
+--------------------------------------------------------------*/
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.typewriter_effect{
+    display: inline-block;
+}
+.typed_out{
+    overflow: hidden;
+    border-right: .10em solid white;
+    color: white;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: 
+        typing 1s steps(20, end) forwards;
+    width: 0;
+    font-size: 400%;
+    text-align: center;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+@media (max-width: 1024px) {
+  .bg-image {
+    background-attachment: scroll;
+  }
+}
+.overlay-mf {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+.paralax-mf {
+    position: relative;
+    padding: 12rem 0;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Resources Section
+--------------------------------------------------------------*/
+.external_links {
+    text-align: center;
 }
