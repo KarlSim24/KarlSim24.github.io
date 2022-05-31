@@ -1,3 +1,7 @@
+a:any-link {
+    text-decoration: none;
+    color: rgb(100,100,100);
+}
 /*--------------------------------------------------------------
 # Navbar Section
 --------------------------------------------------------------*/
@@ -14,7 +18,7 @@
     font-size: 175%;
     font-family: Monospace, Arial, Helvetica, sans-serif;
     padding: 10px 30px;
-    color: rgb(80,80,80);
+    color: rgb(100,100,100);
 }
 li {
     display: inline;
@@ -42,7 +46,7 @@ li {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: rgb(80,80,80);;
+    background-color: rgb(100,100,100);
     transform-origin: bottom left;
     transition: all 0.4s ease-in-out 0s;
     width: 80%;
@@ -70,7 +74,8 @@ li {
     white-space: nowrap;
     font-family: Monospace, Arial, Helvetica, sans-serif;
     animation: 
-        typing 1.5s steps(20, end) forwards;
+        typing 1.5s steps(20, end) forwards,
+        blink 1s infinite;
     font-size: 400%;
     text-align:right;
     vertical-align:bottom;
@@ -81,6 +86,10 @@ li {
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
+}
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-color: white; }
 }
 
 .bg-image {
@@ -111,8 +120,25 @@ li {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-
-
+.sect_title {
+    text-align: center;
+    font-size: 200%;
+    font-family: Monospace, Arial, Helvetica, sans-serif;
+    color: rgb(100,100,100);
+}
+/*------/ Box /------*/
+.box-pl2 {
+    padding-left: 2rem;
+}
+  
+.box-shadow-full {
+    padding: 3rem 1.25rem;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    z-index: 2;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
 
 /*--------------------------------------------------------------
 # Resources Section
