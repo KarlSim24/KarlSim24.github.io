@@ -2,6 +2,11 @@ a:any-link {
     text-decoration: none;
     color: rgb(100,100,100);
 }
+.site_text {
+    font-size: 100%;
+    font-family: Monospace, Arial, Helvetica, sans-serif;
+    color: rgb(100,100,100);
+}
 /*--------------------------------------------------------------
 # Navbar Section
 --------------------------------------------------------------*/
@@ -10,7 +15,21 @@ a:any-link {
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    top: 0px;
+    background-color: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(190,190,190);
+    position: sticky;
+    transition-duration: 500ms;
   }
+/* .navbar.hover {
+    transform: translateY(0);
+    transition-duration: 500ms;
+} */
+.navbar.fixed-top {
+    transform: translateY(-100%); /* normal, hidden state */
+    transition-duration: 500ms;
+}
 .navbar_links {
     letter-spacing: 1px;
     display: flex;
@@ -132,7 +151,7 @@ li {
     padding: 3rem 1.25rem;
     position: relative;
     background-color: #fff;
-    margin-bottom:200px;
+    margin-bottom:100px;
     height: 330px;
     z-index: 2;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
@@ -146,13 +165,50 @@ li {
     height: 330px;
     margin: auto;
     display: block;
-    border: .5px solid rgb(150, 150, 150);;
+    border: .5px solid rgb(150, 150, 150);
 }
-.site_text {
-    font-size: 100%;
-    font-family: Monospace, Arial, Helvetica, sans-serif;
-    color: rgb(100,100,100);
+
+/*--------------------------------------------------------------
+# Experience Section
+--------------------------------------------------------------*/
+.exp_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 50px;
 }
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+.card {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: fit-content;
+    width: 40%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.card_title {
+    margin-top: 30px;
+}
+.card_body {
+    padding: 20px;    
+}
+.scroll_text {
+    z-index: 1000;
+    color:white;
+    font-size: 200%;
+    background-color: rgb(170, 170, 170);
+    width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Resources Section

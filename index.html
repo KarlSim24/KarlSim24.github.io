@@ -5,6 +5,7 @@
     <title>My Personal Website</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
   </head>
   <body>
     
@@ -18,12 +19,23 @@
       <div class="navbar_right">
         <ul class="navbar_links">
           <li><a class="hover-underline-animation" href="#about">About</a></li>
-          <li></li><a class="hover-underline-animation">Experience</a></li>
+          <li></li><a class="hover-underline-animation" href="#experience">Experience</a></li>
           <li></li><a class="hover-underline-animation">Projects</a></li>
           <li></li><a class="hover-underline-animation">Resources</a></li>
         </ul>
       </div>
     </nav>
+    <script>
+      document.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        const navbarHeight = 50;
+        const distanceFromTop = Math.abs(
+          document.body.getBoundingClientRect().top
+        );
+        if (distanceFromTop >= navbarHeight) navbar.classList.add("fixed-top");
+        else navbar.classList.remove("fixed-top");
+      });
+    </script>
     
     <!-- ======= Main Section ======= -->
     <div class="paralax-mf bg-image" style="background-image: url(img/seh1.jpg)">
@@ -48,7 +60,60 @@
         </div>
       </div>
     </div>
+    
+    <!-- ======= Experience Section ======= -->
+    <div id="experience" class="exp_title">
+      <p class="sect_title">Experience</p>
+    </div>
+    <div class="exp_items">
+      <div class="card shadow-sm">
+        <div class="card_title">
+          <p class="site_text" style="font-size: 150%;">c1_title</p>
+        </div>
+        <hr>
+        <div class="card_body">
+          <p class="site_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <div class="card shadow-sm">
+        <div class="card_title">
+          <p class="site_text" style="font-size: 150%;">c2_title</p>
+        </div>
+        <hr>
+        <div class="card_body">
+          <p class="site_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </div>
+    <div class="exp_items">
+      <div class="card shadow-sm">
+        <div class="card_title">
+          <p class="site_text" style="font-size: 150%;">c1_title</p>
+        </div>
+        <hr>
+        <div class="card_body">
+          <p class="site_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <div class="card shadow-sm">
+        <div class="card_title">
+          <p class="site_text" style="font-size: 150%;">c2_title</p>
+        </div>
+        <hr>
+        <div class="card_body">
+          <p class="site_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </div>
   
+    <div class="paralax-mf bg-image" style="background-image: url(img/seh2.jpg)">
+      <div class="overlay-mf"></div>
+      <p class="scroll_text site_text">"The good thing about science is that it's true whether or not you believe in it." - Neil deGrasse Tyson</p>
+    </div>
+
+    <!-- ======= Projects Section ======= -->
+
+    
     <!-- ======= Resources Section ======= -->
     <div class="external_links">
       <a class="github_link" href="https://github.com/KarlSim24"><i class="fa fa-github" style="font-size:36px; color:black"></i></a>
