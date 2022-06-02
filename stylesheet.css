@@ -276,7 +276,7 @@ li {
 .btn:focus {
   background-color: rgb(190, 190, 190);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  transform: translateY(-1px);
+  transform: translateY(-3px);
 }
 .btn:active {
   background-color: rgb(120, 120, 120);
@@ -285,6 +285,7 @@ li {
 }
 .hr_table {
     width: 75%;
+    border: .5px solid rgb(190, 190, 190);
     margin-left: auto;
     margin-right: auto;
 }
